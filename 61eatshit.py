@@ -8,7 +8,7 @@ def send_requests():
         requests.get("https://api.sharecuts.cn/users/ranked/by/download?limit=250&offset=0")
 
 threads = []
-for i in range(10):
+for i in range(20):
     t = threading.Thread(target=send_requests)
     t.start()
     threads.append(t)
